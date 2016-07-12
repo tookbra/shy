@@ -1,0 +1,56 @@
+server:
+    port: 8081
+    tomcat:
+        max-threads: 500
+        uri-encoding: UTF-8
+        accesslog:
+            enabled: false
+        protocol-header: x-forwarded-proto
+        remote-ip-header: x-forwarded-for
+        background-processor-delay: 30
+        basedir:
+    contextPath:
+
+spring:
+    application:
+        name: shy
+    http:
+        encoding:
+            charset: UTF-8
+            enabled: true
+            force: true
+    thymeleaf:
+        cache: false
+
+
+    redis:
+          host: 127.0.0.1
+          port: 6400
+          database: 0
+          pool:
+              max-idle: 8
+              min-idle: 0
+              max-active: 8
+              max-wait: -1
+    velocity:
+          resource-loader-path: classpath:/templates/
+          prefix:
+          suffix: .vm
+          cache: false
+          check-template-location:  true
+          charset: UTF-8
+          content-type: text/html
+          expose-spring-macro-helpers: true
+          expose-request-attributes: true
+          date-tool-attribute: date
+          toolbox-config-location: classpath:toolbox.xml
+          #toolbox-config-location: toolbox.xml
+          properties:
+              input:
+                  encoding: UTF-8
+              output:
+                  encoding: UTF-8
+
+security:
+    basic:
+        enabled: false

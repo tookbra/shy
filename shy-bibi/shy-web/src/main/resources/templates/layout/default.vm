@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>豆瓣害羞组-照片墙</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="豆瓣害羞组">
+    <meta name="keywords" content="害羞组，豆瓣，照片">
+
+    <link href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" media="screen" href="/css/base.css">
+    <link href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="//cdn.bootcss.com/jquery.swipebox/1.4.4/css/swipebox.css" rel="stylesheet">
+
+</head>
+<body>
+    $screen_content
+
+    <script src="//cdn.bootcss.com/jquery/1.12.2/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="//cdn.bootcss.com/masonry/4.0.0/masonry.pkgd.min.js"></script>
+    <script src="//cdn.bootcss.com/jquery-infinitescroll/2.1.0/jquery.infinitescroll.min.js"></script>
+    <script src="//cdn.bootcss.com/jquery.imagesloaded/4.1.0/imagesloaded.min.js"></script>
+    <script src="//cdn.bootcss.com/jquery.lazyload/1.9.1/jquery.lazyload.js"></script>
+    <script src="//cdn.bootcss.com/jquery.swipebox/1.4.4/js/jquery.swipebox.min.js"></script>
+    <script src="/js/shy.js"></script>
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?0d2f7415b60f45c83dabc35f9b4c36af";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+</body>
+</html>
