@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="豆瓣害羞组">
     <meta name="keywords" content="害羞组，豆瓣，照片">
+    <meta name="referrer" content="never">
 
     <link href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" media="screen" href="/css/base.css">
