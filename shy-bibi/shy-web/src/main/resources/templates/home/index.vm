@@ -13,7 +13,7 @@
         </div>
         <div class="navbar-collapse collapse" role="navigation" aria-expanded="false">
             <ul class="nav navbar-nav navbar-right hidden-sm">
-                <li><a href="https://github.com/tookbra" >关于</a></li>
+                <li><a href="https://github.com/tookbra" target="_blank">关于</a></li>
             </ul>
         </div>
     </div>
@@ -48,9 +48,9 @@
             </div>
             <div style="clear: both;"></div>
             <div class="sub-article">
-                <div class="an-display-time"><i class="fa fa-clock-o"></i>$!date.format('yyyy-MM-dd HH:mm:ss ',${item.updateTimex})</div>
-                <div class="an-display-like"><a href="#" class="zilla-likes" id="zilla-likes-308" title="Like this"><span class="zilla-likes-count">317</span> <span class="zilla-likes-postfix"></span></a></div>
-                <div class="an-display-view"><i class="fa fa-eye"></i> 16652</div>
+                <div class="an-display-time"><i class="fa fa-clock-o"></i>$date.format('yyyy-MM-dd HH:mm:ss ',${item.updateTime})</div>
+                <div class="an-display-like"><a href="#" class="zilla-likes" id="zilla-likes-308" title="Like this"><span class="zilla-likes-count">0</span> <span class="zilla-likes-postfix"></span></a></div>
+                <div class="an-display-view"><i class="fa fa-eye"></i>0</div>
             </div>
         </div>
     #end
