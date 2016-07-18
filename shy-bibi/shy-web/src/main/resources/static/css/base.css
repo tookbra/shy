@@ -84,12 +84,12 @@ span.zilla-likes-count {
 .sub-article .an-display-time {
   float: left;
   font-size: 11px;
-  padding: 5px 0 0 13px; }
+  padding: 5px 0 0 5px; }
 
 .sub-article .an-display-view {
   float: right;
   font-size: 11px;
-  padding: 6px 20px 0 0; }
+  padding: 6px 9px 0 0; }
 
 .sub-article .an-display-comm {
   float: right;
@@ -99,7 +99,7 @@ span.zilla-likes-count {
 .sub-article .an-display-like {
   float: right;
   font-size: 11px;
-  padding: 6px 13px 0 0; }
+  padding: 6px 6px 0 0; }
 
 .sub-article i {
   color: #d2d6db; }
