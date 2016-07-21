@@ -11,4 +11,8 @@ import java.util.List;
 public interface TopicDao {
 
     List<ShyTopic> pageByTopic(Page page);
+
+    Long increment(String key);
+
+    Long getIncrement(final String key);
 }

@@ -16,7 +16,7 @@ $(function(){
             animate: true, //加载时候时候需要动画，默认是false
             extraScrollPx: 50,
             pixelsFromNavToBottom: 300, //滑动de真正触发
-            maxPage: 10,
+            //maxPage: 10,
             loading: {
                 msgText: "加载中...",
                 finishedMsg: '<span>快的没有BIBI了</span>',
@@ -40,7 +40,9 @@ $(function(){
     //动态生成导致事件没有绑定
     $(".container").on("click",".image-popup", function(e){
         e.preventDefault();
-        var data_img = $(this).find('img').attr("data-img");
+
+        var data_img = $.trim($(this).find('img').attr("data-img"));
+        data_img = data_img.substring(0,data_img.length-1);
         var imgs = data_img.split(',');
         var title = $(this).next().find('h2').text();
         var box = [];
@@ -52,5 +54,48 @@ $(function(){
         }
 
         $.swipebox(box);
+        views(this);
     });
+
+
+    $('.zilla-likes').click(function(){
+        var zillaLikes = $(this);
+        var id = zillaLikes.attr("data-id");
+        $.ajax({
+            url:"/likes/" + id,
+            context: this,
+            type:"PUT",
+            success:(function(e){
+                $(this).children()[0].innerText = e;
+            })
+        })
+    });
+
+    toTop();
+
 });
+
+function views(obj){
+    var id = $(obj).attr("data-id");
+    $.ajax({
+        url:"/views/" + id,
+        context: $(obj).parent().find(".zilla-views-count"),
+        type:"PUT",
+        success:(function(e){
+            $(this).html(e);
+        })
+    })
+}
+
+function toTop(){
+    $(window).scroll(function(){
+        if($(window).scrollTop() >= 100){
+            $(".toTop").fadeIn(400);
+        } else {
+            $(".toTop").fadeOut(200);
+        }
+    });
+    $('.toTop').click(function(){
+        $('html,body').animate({scrollTop:0},800);
+    })
+}

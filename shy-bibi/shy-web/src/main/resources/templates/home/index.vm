@@ -1,6 +1,6 @@
 #set($layout="layout/default.vm")
 
-<div class="navbar navbar-inverse navbar-fixed-top">
+<div class="navbar navbar-inverse navbar-fixed-top" id="header">
     <div class="container">
         <div class="navbar-header">
             <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
@@ -22,7 +22,7 @@
     #foreach($item in $shyTopic)
         <div class="home-post">
             #if($item.imgs.size() > 0)
-            <a href="" class="image-popup fh5co-board-img">
+            <a href="" data-id="${item.id}" class="image-popup fh5co-board-img">
                 <img src="$item.imgs.get(0)"
                      data-img="#foreach($img in $item.imgs)
                                 $img,
@@ -31,7 +31,7 @@
             #else
                 <div class="no-image"></div>
             #end
-            <a href="${item.url}" target="view_window">
+            <a href="${item.url}" target="_blank">
                 <h2>${item.title}</h2>
             </a>
             <div class="author">
@@ -49,8 +49,8 @@
             <div style="clear: both;"></div>
             <div class="sub-article">
                 <div class="an-display-time"><i class="fa fa-clock-o"></i>$date.format('yyyy-MM-dd HH:mm:ss ',${item.updateTime})</div>
-                <div class="an-display-like"><a href="#" class="zilla-likes" id="zilla-likes-308" title="Like this"><span class="zilla-likes-count">0</span> <span class="zilla-likes-postfix"></span></a></div>
-                <div class="an-display-view"><i class="fa fa-eye"></i>0</div>
+                <div class="an-display-like"><a href="#" class="zilla-likes" data-id="${item.id}" id="zilla-likes-308" title="Like this"><span class="zilla-likes-count">${item.likes}</span> <span class="zilla-likes-postfix"></span></a></div>
+                <div class="an-display-view"><a href="#" class="zilla-view" data-id="${item.id}"><i class="fa fa-eye"></i><span class="zilla-views-count">${item.views}</span></a></div>
             </div>
         </div>
     #end
@@ -58,4 +58,5 @@
         <div class="nav-previous"></div>
         <div class="nav-next"><a href="/page/2">Older Entries ›</a></div>
     </div>
+
 </div>

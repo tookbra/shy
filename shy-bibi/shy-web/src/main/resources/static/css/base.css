@@ -149,3 +149,21 @@ span.zilla-likes-count {
   padding: 2px;
   font-size: 12px; }
 
+.toTop{
+  display:none;
+
+  height:60px;
+  width:60px;
+  background-image:url(../images/toTop.png);
+  background-repeat: no-repeat;
+}
+
+.toTop01{
+  position:fixed;
+  _position: absolute;
+  _top: expression(documentElement.scrollTop + documentElement.clientHeight-this.offsetHeight-35);
+  z-index:200;
+  right:70px;
+  bottom:35px;
+}
+

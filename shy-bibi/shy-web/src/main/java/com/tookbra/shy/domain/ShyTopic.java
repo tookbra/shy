@@ -28,6 +28,10 @@ public class ShyTopic implements Serializable {
 
     private Date updateTime;
 
+    private Long likes;
+
+    private Long views;
+
     public Integer getId() {
         return id;
     }
@@ -108,6 +112,22 @@ public class ShyTopic implements Serializable {
         this.avatar = avatar;
     }
 
+    public Long getLikes() {
+        return likes;
+    }
+
+    public void setLikes(Long likes) {
+        this.likes = likes;
+    }
+
+    public Long getViews() {
+        return views;
+    }
+
+    public void setViews(Long views) {
+        this.views = views;
+    }
+
     @Override
     public String toString() {
         return "ShyTopic{" +
@@ -121,6 +141,8 @@ public class ShyTopic implements Serializable {
                 ", alt='" + alt + '\'' +
                 ", avatar='" + avatar + '\'' +
                 ", updateTime=" + updateTime +
+                ", likes=" + likes +
+                ", views=" + views +
                 '}';
     }
 }

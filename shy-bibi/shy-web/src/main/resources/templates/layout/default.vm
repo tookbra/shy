@@ -16,8 +16,10 @@
 
 </head>
 <body>
+
     $screen_content
 
+    <a style="display: none;" href="#header" class="toTop toTop01"><div>&nbsp;</div></a>
     <script src="//cdn.bootcss.com/jquery/1.12.2/jquery.min.js"></script>
     <script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="//cdn.bootcss.com/masonry/4.0.0/masonry.pkgd.min.js"></script>
